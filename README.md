@@ -25,7 +25,7 @@
 
 ```bash
 # clone the repo
-git clone https://github.com/<your-github-user>/oci-audit-extractor.git
+git clone https://github.com/venkatgcfa/oci_audit_to_csv.git
 cd oci-audit-extractor
 
 # (optional) set up a virtual environment
