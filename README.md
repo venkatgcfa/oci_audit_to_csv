@@ -28,7 +28,7 @@ Both passes are memory‑efficient and tolerate broken / partial JSON files.
 
 ```bash
 # 1 – Clone / copy the script
-$ [git clone https://github.com/<your‑org>/oci‑audit‑extractor.git](https://github.com/venkatgcfa/oci_audit_to_csv.git)
+$ git clone https://github.com/venkatgcfa/oci_audit_to_csv.git
 $ cd oci‑audit‑extractor
 
 # 2 – Run against a folder of JSON logs
