@@ -1,6 +1,6 @@
 # OCI Audit Log Extractor
 
-`oci_audit_to_csv.py` is a high‑performance, memory‑efficient tool for converting raw Oracle Cloud (OCI) audit‑log JSON files (https://docs.oracle.com/en-us/iaas/Content/Audit/Reference/logeventreference.htm#Contents_of_an_Audit_Log_Event) into two CSV outputs:
+`oci_audit_to_csv.py` is a high‑performance, memory‑efficient tool for converting raw Oracle Cloud (OCI) audit‑log JSON files into two CSV outputs:
 
 1. **Full CSV** (`<prefix>_full.csv`) – every field discovered in all events
 2. **Forensic CSV** (`<prefix>_forensic.csv`) – only the critical fields recommended for security investigations
@@ -109,7 +109,7 @@ Fields in square brackets indicate dynamic expansion of nested keys.
 
 ## 🔧 Customization
 
-* **Adjust forensic fields** by editing the `FORENSIC_FIELDS` list in `oci_audit_to_csv.py`.
+* **Adjust forensic fields** by editing the `FORENSIC_FIELDS` list in `oci_audit_to_csv.py`. (Reference:- https://docs.oracle.com/en-us/iaas/Content/Audit/Reference/logeventreference.htm#Contents_of_an_Audit_Log_Event)
 * **Add sample logs** under `samples/` for testing or demos.
 * Integrate into CI by running smoke tests on `samples/` via GitHub Actions.
 
