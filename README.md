@@ -125,5 +125,4 @@ Feel free to use, modify, and distribute under the terms of the MIT license.
 ## 🤝 Acknowledgements
 
 - Built with ❤️ for teams analysing Oracle Cloud security events.
-- Inspired by countless late‑night dive‑into‑logs sessions.
 
