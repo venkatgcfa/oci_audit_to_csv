@@ -1,52 +1,111 @@
 {
-  "cloud-events-version": "0.1",
-  "content-type": "application/json",
-  "event-id": "12345678-9abc-def0-1234-56789abcdef0",
-  "event-time": "2025-08-15T10:42:17.123000+00:00",
-  "event-type": "com.oraclecloud.identity.updateUser",
-  "event-type-version": "2.0",
-  "source": "identity",
-  "data": {
-    "event-name": "updateUser",
-    "event-grouping-id": "a1b2c3d4-e5f6-7890-a1b2-c3d4e5f67890",
-    "availability-domain": "AD2",
-    "compartment-id": "ocid1.tenancy.oc1..exampletenancy123",
-    "compartment-name": "corp‑security",
-    "defined-tags": null,
-    "freeform-tags": { "env": "prod", "team": "security" },
-    "identity": {
-      "auth-type": "user",
-      "principal-id": "ocid1.user.oc1..exampleuser789",
-      "principal-name": "alice.junior@example.com",
-      "ip-address": "203.0.113.45",
-      "user-agent": "OCI-CLI/3.42.0 (python 3.10.6; x86_64-darwin)",
-      "tenant-id": "ocid1.tenancy.oc1..exampletenancy123"
-    },
-    "request": {
-      "action": "PUT",
-      "path": "/20160918/users/ocid1.user.oc1..exampleuser789",
-      "parameters": { "userId": "ocid1.user.oc1..exampleuser789" },
-      "headers": {
-        "Date": [ "Fri, 15 Aug 2025 10:42:17 GMT" ],
-        "Content-Type": [ "application/json" ],
-        "Opc-Request-Id": [ "req-7afb1234abcd5678" ]
-      },
-      "id": "req-7afb1234abcd5678"
-    },
-    "response": {
-      "status": "200",
-      "message": "updateUser succeeded",
-      "response-time": "2025-08-15T10:42:17.345000+00:00",
-      "headers": {
-        "Content-Type": [ "application/json" ],
-        "opc-request-id": [ "req-7afb1234abcd5678" ]
-      }
-    },
-    "resource-id": "ocid1.user.oc1..exampleuser789",
-    "resource-name": "alice.junior",
-    "state-change": {
-      "previous": { "status": "ACTIVE" },
-      "current": { "status": "ACTIVE" }
-    }
-  }
+	"eventType": "com.oraclecloud.ComputeApi.GetInstance",
+	"cloudEventsVersion": "0.1",
+	"eventTypeVersion": "2.0",
+	"source": "ComputeApi",
+	"eventId": "<unique_ID>",
+	"eventTime": "2019-09-18T00:10:59.252Z",
+	"contentType": "application/json",
+	"data": {
+		"eventGroupingId": null,
+		"eventName": "GetInstance",
+		"compartmentId": "ocid1.tenancy.oc1..<unique_ID>",
+		"compartmentName": "compartmentA",
+		"resourceName": "my_instance",
+		"resourceId": "ocid1.instance.oc1.phx.<unique_ID>",
+		"availabilityDomain": "<availability_domain>",
+		"freeformTags": null,
+		"definedTags": null,
+		"identity": {
+			"principalName": "ExampleName",
+			"principalId": "ocid1.user.oc1..<unique_ID>",
+			"authType": "natv",
+			"callerName": null,
+			"callerId": null,
+			"tenantId": "ocid1.tenancy.oc1..<unique_ID>",
+			"ipAddress": "172.24.80.88",
+			"credentials": null,
+			"userAgent": "Jersey/2.23 (HttpUrlConnection 1.8.0_212)",
+			"consoleSessionId": null
+		},
+		"request": {
+			"id": "<unique_ID>",
+			"path": "/20160918/instances/ocid1.instance.oc1.phx.<unique_ID>",
+			"action": "GET",
+			"parameters": {},
+			"headers": {
+				"opc-principal": [
+					"{\"tenantId\":\"ocid1.tenancy.oc1..<unique_ID>\",\"subjectId\":\"ocid1.user.oc1..<unique_ID>\",\"claims\":[{\"key\":\"pstype\",\"value\":\"natv\",\"issuer\":\"authService.oracle.com\"},{\"key\":\"h_host\",\"value\":\"iaas.r2.oracleiaas.com\",\"issuer\":\"h\"},{\"key\":\"h_opc-request-id\",\"value\":\"<unique_ID>\",\"issuer\":\"h\"},{\"key\":\"ptype\",\"value\":\"user\",\"issuer\":\"authService.oracle.com\"},{\"key\":\"h_date\",\"value\":\"Wed, 18 Sep 2019 00:10:58 UTC\",\"issuer\":\"h\"},{\"key\":\"h_accept\",\"value\":\"application/json\",\"issuer\":\"h\"},{\"key\":\"authorization\",\"value\":\"Signature headers=\\\"date (request-target) host accept opc-request-id\\\",keyId=\\\"ocid1.tenancy.oc1..<unique_ID>/ocid1.user.oc1..<unique_ID>/8c:b4:5f:18:e7:ec:db:08:b8:fa:d2:2a:7d:11:76:ac\\\",algorithm=\\\"rsa-pss-sha256\\\",signature=\\\"<unique_ID>\\\",version=\\\"1\\\"\",\"issuer\":\"h\"},{\"key\":\"h_(request-target)\",\"value\":\"get /20160918/instances/ocid1.instance.oc1.phx.<unique_ID>\",\"issuer\":\"h\"}]}"
+				],
+				"Accept": [
+					"application/json"
+				],
+				"X-Oracle-Auth-Client-CN": [
+					"splat-proxy-se-02302.node.ad2.r2"
+				],
+				"X-Forwarded-Host": [
+					"compute-api.svc.ad1.r2"
+				],
+				"Connection": [
+					"close"
+				],
+				"User-Agent": [
+					"Jersey/2.23 (HttpUrlConnection 1.8.0_212)"
+				],
+				"X-Forwarded-For": [
+					"172.24.80.88"
+				],
+				"X-Real-IP": [
+					"172.24.80.88"
+				],
+				"oci-original-url": [
+					"https://iaas.r2.oracleiaas.com/20160918/instances/ocid1.instance.oc1.phx.<unique_ID>"
+				],
+				"opc-request-id": [
+					"<unique_ID>"
+				],
+				"Date": [
+					"Wed, 18 Sep 2019 00:10:58 UTC"
+				]
+			}
+		},
+		"response": {
+			"status": "200",
+			"responseTime": "2019-09-18T00:10:59.278Z",
+			"headers": {
+				"ETag": [
+					"<unique_ID>"
+				],
+				"Connection": [
+					"close"
+				],
+				"Content-Length": [
+					"1828"
+				],
+				"opc-request-id": [
+					"<unique_ID>"
+				],
+				"Date": [
+					"Wed, 18 Sep 2019 00:10:59 GMT"
+				],
+				"Content-Type": [
+					"application/json"
+				]
+			},
+			"payload": {
+				"resourceName": "my_instance",
+				"id": "ocid1.instance.oc1.phx.<unique_ID>"
+			},
+			"message": null
+		},
+		"stateChange": {
+			"previous": null,
+			"current": null
+		},
+		"additionalDetails": {
+			"imageId": "ocid1.image.oc1.phx.<unique_ID>",
+			"shape": "VM.Standard1.1",
+			"type": "CustomerVmi"
+		}
+	}
 }
